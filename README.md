@@ -4,5 +4,14 @@ Classic Android Weather App in java that compares multiple Weather APIs to provi
 # 📱 App
 a
 
-# 💻 Code
-a
+# 💻 Code & Apis
+
+The APIs i used are:
+
+-
+-
+-
+-
+
+
+Aaa
