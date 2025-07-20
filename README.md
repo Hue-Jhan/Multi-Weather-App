@@ -8,10 +8,11 @@ a
 
 The APIs i used are:
 
--
--
--
--
+- VisualCrossing Api
+- AccuWeather Api
+- OpenMeteo Api
+- WeatherApi.com Api
+- IlMeteo (Scraper)
 
 
 Aaa
