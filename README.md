@@ -1,5 +1,5 @@
-# Multi-Weather-App
-Classic Android Weather App in java that compares multiple Weather APIs to provide the best possible result.
+# Multi Weather App
+Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result. It also shows the various APIs forecast data to the user.
 
 # 📱 App
 a
