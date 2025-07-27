@@ -8,10 +8,10 @@ a
 
 The APIs i used are:
 
-- VisualCrossing Api, []()
-- AccuWeather Api, []()
-- OpenMeteo Api, []()
-- WeatherApi.com Api, []()
-- IlMeteo (Scraper), []()
+- VisualCrossing Api ([here](a));
+- AccuWeather Api ([here](a));
+- OpenMeteo Api ([here](a));
+- WeatherApi.com Api ([here](a));
+- IlMeteo (Scraper) ([here](a)).
 
 The code makes requests to the APIs to extract the current weather data, and the forecast data for the next few days, including hourly data. The weather infornations are then saved into custom data types and displayed to the user.  
