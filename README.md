@@ -1,7 +1,7 @@
 # Multi Weather App
 Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result, and shows daily/hourly data from each API.
 
-# 📱 App
+# 📱 App & Gui
 The
 
 # 💻 Code & Apis
