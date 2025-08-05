@@ -8,12 +8,13 @@ The
 
 The APIs i used are:
 
-- GeoCodeMaps APi ([here](a));
-- VisualCrossing Api ([here](a));
-- AccuWeather Api ([here](a));
-- OpenMeteo Api ([here](a));
-- WeatherApi.com Api ([here](a));
-- IlMeteo (Scraper) ([here](a)).
+- GeoCodeMaps APi ([here](https://geocode.maps.co/));
+- VisualCrossing Api ([here](https://www.visualcrossing.com/weather-query-builder/));
+- AccuWeather Api ([here](https://developer.accuweather.com/));
+- OpenMeteo Api ([here](https://open-meteo.com/en/docs));
+- WeatherApi.com Api ([here](https://www.weatherapi.com/));
+- IlMeteo (scraper, [here](http://ilmeteo.it/meteo/));
+- Windy (work in progress, [here](https://api.windy.com/)).
 
 The code makes requests to the APIs to extract the current weather data, and the forecast data for the next few days, including hourly data. The weather informations are then saved into custom data types, an average result is calculated and displayed to the user.  
 
