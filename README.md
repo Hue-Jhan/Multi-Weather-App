@@ -10,6 +10,8 @@ The user can add infinite locations and swipe through them, the user can also sc
 
 Because weather stations are generally not very accurate, it's best not to consider forecasts data for days past the "day after tomorrow". 
 
+
+
 # 💻 Code & Apis
 
 The APIs i used are:
@@ -23,4 +25,5 @@ The APIs i used are:
 - Windy (work in progress Api, [here](https://api.windy.com/)), international.
 
 The code makes requests to the APIs to extract the current weather data, and the forecast data for the next few days, including hourly data. The weather informations are then saved into custom data types, an average result is calculated and displayed to the user. The daily data is saved into storage and updated every 2 hours for efficiency (and to not waste api requests).
+
 
