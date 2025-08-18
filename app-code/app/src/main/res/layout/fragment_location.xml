@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="85dp">
+
+        <TextView
+            android:id="@+id/locationNameTextView"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="left"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="4"
+            android:text="Location Name"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.459" />
+
+        <TextView
+            android:id="@+id/regionNameTextView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="left"
+            android:text="Lazio, Italy"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.909" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!--
+            <TextView
+                android:id="@+id/locationNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#40000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                android:text="Location Name"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/regionNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lazio, Italy"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+            -->
+
+            <!-- Current weather -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weatherPanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/weather_panel_background"
+                android:clipToOutline="true"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:outlineProvider="background">
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blurView1"
+                    android:layout_width="370dp"
+                    android:layout_height="230dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="360dp"
+                    android:layout_height="220dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/weatherIconImageView"
+                        android:layout_width="135dp"
+                        android:layout_height="134dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="130dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/ic_sun"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.078"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.258" />
+
+                    <ImageView
+                        android:id="@+id/tempIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="171dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/tempp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.03"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.23000002" />
+
+                    <TextView
+                        android:id="@+id/temperatureTextView"
+                        android:layout_width="110dp"
+                        android:layout_height="49dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginStart="150dp"
+                        android:text="24°C"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.703"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.19" />
+
+                    <TextView
+                        android:id="@+id/windInfoTextView"
+                        android:layout_width="125dp"
+                        android:layout_height="46dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Wind: 12.5 km/h"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.975"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.584" />
+
+                    <ImageView
+                        android:id="@+id/windIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="165dp"
+                        android:layout_marginTop="87dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/wind_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.078"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.258" />
+
+                    <ImageView
+                        android:id="@+id/windDirIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="225dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/wind_dir"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.078"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.258" />
+
+                    <TextView
+                        android:id="@+id/windDirTextView"
+                        android:layout_width="60dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="30dp"
+                        android:text="NE"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.985"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.814" />
+
+                    <TextView
+                        android:id="@+id/weatherConditionView"
+                        android:layout_width="219dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="end|bottom"
+                        android:text="Sunny"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.898" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Days Title -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/DailyForecastTitleView"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="0dp"
+                android:clipToOutline="true"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:outlineProvider="background">
+
+                <ImageView
+                    android:id="@+id/clock"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.03"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.23000002" />
+
+                <TextView
+                    android:id="@+id/DailyForecastTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Daily Forecasts"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:indeterminateTint="@android:color/darker_gray"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:minWidth="30dp"
+                    android:minHeight="30dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/DailyForecastTitle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Days forecasts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:id="@+id/dailyForecastScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_marginTop="16dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/averageDailyForecastRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Hourly Title -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/TodayHourlyForecastTitleView"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:clipToOutline="true"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:outlineProvider="background">
+
+                <ImageView
+                    android:id="@+id/clock2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/clock"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.03"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.23000002" />
+
+                <TextView
+                    android:id="@+id/HourlyForecastTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Hourly Forecasts"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:indeterminateTint="@android:color/darker_gray"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:minWidth="30dp"
+                    android:minHeight="30dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/HourlyForecastTitle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Hourly forecasts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:id="@+id/HourlyForecastScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="16dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/averageHourlyForecastRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="210dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
