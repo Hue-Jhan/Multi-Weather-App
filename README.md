@@ -1,5 +1,5 @@
-# Multi Weather App
-Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result, and shows daily/hourly data from each API.
+# ☀Multi Weather App⛈
+Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result, and shows average daily/hourly data from each API.
 
 Here's a quick showcase:
 
@@ -9,7 +9,7 @@ https://github.com/user-attachments/assets/763279a8-5130-4173-9a73-e84c1c277445
 
 # 📱 App & Gui
 
-<img src="media/wsunny.jpg" align="left" width=150>
+<img src="media/wsunny.jpg" align="left" width=200>
 
 The empty app is a simple white page with 2 buttons, the "search" button on top right corner will pop up a text menu, once the user inserts a city name in it the APIs will fetch weather data for that location and display it to the user.
 
@@ -53,6 +53,6 @@ When calculating the average weather condition (like cloudy or sunny), getting t
 
 Why isn't Sunny 0? because statistically (i mean from what i've experienced) if the weather says it's going to be a Sunny day, there aren't going to be sudden changes in the forecast and the weather will be almost certainly sunny through the whole day, so i might as well say -1 or -5 cuz the result will most likely not change, while if the forecast says cloudy then there might be chanches of rain, which means the calculations have to be more precise to accurately predict weather it's going to rain or not. I did not include the "chanche of rain" variable in the data types, however EVERY api i used has this value, if you want you can modify the entire code, fetch this value and add it to the data types. 
 
-The average wind direction is calculated using radians of course, then turned into degrees and the string corresponding to the name of the direction (eg SSW for south-south-west).
+The average wind direction is calculated using radians of course, then turned into degrees and the string corresponding to the name of the direction (eg SSW for south-south-west). The remaining data like temperature and windspeed is a simple median calculation.
 
-The remaining data like temperature and windspeed is a simple median calculation.
+Next i might include my other project ([this one](https://github.com/Hue-Jhan/Noaa-Satellite-Decoder)) to fetch live data from satellites to get even more accurate weather informations and display them on screen.
