@@ -1,7 +1,12 @@
 # Multi Weather App
 Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result, and shows daily/hourly data from each API.
 
+""" video here """
+
 # 📱 App & Gui
+
+<img src="media/wnight.jpg" align="left" width=200>
+
 The empty app is a simple white page with 2 buttons, the "search" button on top right corner will pop up a text menu, once the user inserts a city name in it the APIs will fetch weather data for that location and display it to the user.
 
 The "plus" button on bottom right will show 2 more buttons, one to delete the current location from the location list, the other for a custom useless notification and a useless pop up menu. You are free to customize it if u want.
