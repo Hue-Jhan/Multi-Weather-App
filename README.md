@@ -21,7 +21,8 @@ The user can add infinite locations and swipe through them, the user can also sc
 
 Because weather stations are generally not very accurate, it's best not to consider forecasts data for days past the "day after tomorrow".
 
-The user cannot delete every location, it has to keep at least one location, dont ask me to fix this cuz i already got bored off this project, thanks.
+The user cannot delete every location, it has to keep at least one, dont ask me to fix this cuz im tired of this project.
+
 
 
 # 💻 Code & Apis
