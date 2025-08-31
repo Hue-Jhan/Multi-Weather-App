@@ -17,7 +17,7 @@ The background images change depening on the current weather forecast, there are
 
 The "plus" button on bottom right will show 2 more buttons, one to delete the current location from the location list, the other for a custom useless notification and a useless pop up menu. You are free to customize it if u want.
 
-The user can add infinite locations and swipe through them, the user can also scroll through the scrollMenus used to dispay Daily and Hourly data. Clicking on each day will pop up its hourly data, which is also a Horizontal Scroll bar menu that displays each hour forecast.
+The user can add infinite locations and swipe through them, the user can also scroll through the scrollMenus used to dispay Daily and Hourly data. Clicking on each day will pop up its hourly data, which is also a Horizontal Scroll bar menu that displays each hour forecast. Each of these scrolling bars is equipped with a semi-transparent background and a blur panel, i specifically used eight-bit blur library to recreate an effect similar to the apple liquid-crystal effect, and i love how it turned out at the end.
 
 Because weather stations are generally not very accurate, it's best not to consider forecasts data for days past the "day after tomorrow".
 
