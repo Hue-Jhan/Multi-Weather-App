@@ -1,5 +1,5 @@
 # ☀Multi Weather App⛈
-Android Weather App in java that compares multiple Weather APIs/Scrapers to provide the best possible result, and shows average daily/hourly data from each API.
+Android Weather App in java that given a location compares multiple Weather APIs/Scrapers and shows its average current/daily/hourly data to provide the best possible result.
 
 Here's a quick showcase:
 
@@ -13,16 +13,17 @@ https://github.com/user-attachments/assets/763279a8-5130-4173-9a73-e84c1c277445
 
 The empty app is a simple white page with 2 buttons, the "search" button on top right corner will pop up a text menu, once the user inserts a city name in it the APIs will fetch weather data for that location and display it to the user.
 
-The background images change depening on the current weather forecast, there are like 7 different backgrounds stolen- ehm i mean borrowed from the internet, 10 considering the day/night variants. I wanted to keep a "simple cartoon asthetic, but also a bit corporate" vibe to the app so i chose these ones, you are free to change them. I also made a custom logo using canva.
+The background images change depening on the current weather forecast, there are like 7 different backgrounds stolen- ehm i mean borrowed from the internet, 10 considering the day/night variants. I wanted to keep a "simple cartoon asthetic, but also a bit corporate" vibe to the app so i chose these ones, you are free to change them. I also made a custom app icon using canva, it's on the bottom right of this paragraph.
 
 The "plus" button on bottom right will show 2 more buttons, one to delete the current location from the location list, the other for a custom useless notification and a useless pop up menu. You are free to customize it if u want.
 
 The user can add infinite locations and swipe through them, the user can also scroll through the scrollMenus used to dispay Daily and Hourly data. Clicking on each day will pop up its hourly data, which is also a Horizontal Scroll bar menu that displays each hour forecast. Each of these scrolling bars is equipped with a semi-transparent background and a blur panel, i specifically used eight-bit blur library to recreate an effect similar to the apple liquid-crystal effect, and i love how it turned out at the end.
 
+<img src="app-code/app/src/main/ic_launcher-playstore.png" align="right" width=100>
+
 Because weather stations are generally not very accurate, it's best not to consider forecasts data for days past the "day after tomorrow".
 
 The user cannot delete every location, it has to keep at least one, dont ask me to fix this cuz im tired of this project.
-
 
 
 # 💻 Code & Apis
