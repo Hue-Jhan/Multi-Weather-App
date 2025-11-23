@@ -1,5 +1,5 @@
 # ☀Multi Weather App⛈
-Android Weather App in java that given a location compares multiple Weather APIs/Scrapers and shows its average current/daily/hourly data to provide the best possible result.
+Android Weather App in java that given a location compares multiple Weather APIs/Scrapers and shows its average current/daily/hourly data to provide the best possible result. Check out the Api [here](https://github.com/Hue-Jhan/Multi-Weather-Api).
 
 Here's a quick showcase:
 
